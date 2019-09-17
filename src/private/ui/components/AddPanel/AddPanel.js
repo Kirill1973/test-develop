@@ -13,20 +13,25 @@ class AddPanel extends Component {
 	};
 
 	onSendPost = () => {
-		const { current: { value: inputValueOne } } = this.inputValue;
-		const { current: { value: inputValueTwo } } = this.inputValue2;
+		const {
+			current: { value: inputValueOne }
+		} = this.inputValue;
+		const {
+			current: { value: inputValueTwo }
+		} = this.inputValue2;
 		const { onAddPostAsync } = this.props;
 		if (inputValueOne.length === 0 || inputValueTwo.length === 0) {
-			this.setState({ valuePar: 'вы не заполнили поля' })
+			this.setState({ valuePar: 'вы не заполнили поля' });
 		} else {
 			const newObj = {
-				title: inputValueOne, body: inputValueTwo,
+				title: inputValueOne,
+				body: inputValueTwo,
 				time: `${format(new Date(), 'HH:mm')}`,
 				date: `${format(new Date(), 'dd:MM:yyyy')}`,
-				comments: [],
+				comments: []
 			};
 			onAddPostAsync(newObj);
-			this.setState({valuePar: ''})
+			this.setState({ valuePar: '' });
 		}
 	};
 
@@ -37,13 +42,25 @@ class AddPanel extends Component {
 				<p className={Styles.AddPanel__Warning}>{valuePar}</p>
 				<div className={Styles.AddPanel__Form}>
 					<div className={Styles.AddPanel__Inputs}>
-						<input ref={this.inputValue} type="text" className={Styles.AddPanel__Input} placeholder="укажите тему блога"/>
-						<input ref={this.inputValue2} type="text" className={Styles.AddPanel__Input} placeholder="укажите сообщение"/>
+						<input
+							ref={this.inputValue}
+							type="text"
+							className={Styles.AddPanel__Input}
+							placeholder="укажите тему блога"
+						/>
+						<input
+							ref={this.inputValue2}
+							type="text"
+							className={Styles.AddPanel__Input}
+							placeholder="укажите сообщение"
+						/>
 					</div>
-					<button type="button" onClick={this.onSendPost}>Добавить блог</button>
+					<button type="button" onClick={this.onSendPost}>
+						Добавить блог
+					</button>
 				</div>
 			</div>
-		)
+		);
 	}
 }
 
@@ -51,4 +68,7 @@ const mapDispatchToProps = {
 	onAddPostAsync: asyncActions.onAddPostAsync,
 };
 
-export default connect(null, mapDispatchToProps)(AddPanel);
+export default connect(
+	null,
+	mapDispatchToProps,
+)(AddPanel);

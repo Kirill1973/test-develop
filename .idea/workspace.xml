@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e4217b8-1bfd-42f0-9d4a-017e5ee7dc90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
+            <state relative-caret-position="-1323">
+              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.module.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+            <state relative-caret-position="233">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            <state relative-caret-position="208">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="249">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state relative-caret-position="41">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -172,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/reducers.js" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/saga/workers/addComment.js" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/saga/workers/getPostData.js" />
-        <option value="$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/actions.js" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/types.js" />
         <option value="$PROJECT_DIR$/src/private/engine/config/api.js" />
@@ -181,12 +180,13 @@
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/saga/asyncActions.js" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/saga/workers/unpdatePost.js" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postData/saga/watchers.js" />
-        <option value="$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js" />
-        <option value="$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js" />
         <option value="$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.module.scss" />
         <option value="$PROJECT_DIR$/src/private/engine/core/postsData/reducers.js" />
-        <option value="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.js" />
         <option value="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.module.scss" />
+        <option value="$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js" />
+        <option value="$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.js" />
+        <option value="$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js" />
+        <option value="$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js" />
       </list>
     </option>
   </component>
@@ -428,12 +428,12 @@
       <updated>1568648498431</updated>
       <workItem from="1568648504739" duration="1877000" />
       <workItem from="1568660412470" duration="11792000" />
-      <workItem from="1568715440457" duration="18371000" />
+      <workItem from="1568715440457" duration="18650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32040000" />
+    <option name="totallyTimeSpent" value="32319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -763,26 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.module.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -817,10 +797,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js">
+    <entry file="file://$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="233">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/private/ui/components/RenderPosts/RenderPosts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -829,18 +816,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
+        <state relative-caret-position="-1323">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/private/ui/components/PostDetails/PostDetails.module.scss">
+    <entry file="file://$PROJECT_DIR$/src/private/ui/components/MessageBox/MessageBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        <state relative-caret-position="41">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/private/ui/components/AddPanel/AddPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

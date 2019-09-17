@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import { asyncActions } from '../../../engine/core/postsData/saga/asyncActions';
+import AddPanel from '../AddPanel/AddPanel';
 import MessageBox from '../MessageBox/MessageBox';
-import AddPanel from '../AddPanel/AddPanel'
 import Styles from './RenderPosts.module.scss';
 
 class RenderPosts extends Component {
@@ -28,7 +28,9 @@ class RenderPosts extends Component {
 						/>
 					</div>
 				) : (
-					posts.map(item => <MessageBox key={item.id} item={item} deletePost={deletePost} />)
+					posts.map(item => (
+						<MessageBox key={item.id} item={item} deletePost={deletePost} />
+					))
 				)}
 				<AddPanel />
 			</div>
