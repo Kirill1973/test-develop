@@ -1,0 +1,21 @@
+.AddPanel {
+  &__Form {
+    display: flex;
+    justify-content: center;
+  }
+  &__Inputs {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__Input {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  &__Warning {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+}

@@ -1,0 +1,4 @@
+export const types = Object.freeze({
+	GET_POST_DATA_SUCCESS: 'GET_POST_DATA_SUCCESS',
+	GET_POST_DATA_FAIL: 'GET_POST_DATA_FAIL',
+});

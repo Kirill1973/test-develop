@@ -1,0 +1,34 @@
+.MessageBox {
+  width: 90%;
+  margin: 0 auto;
+  background: #00BFFF;
+  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  &__Features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__Delete {
+    background: none;
+    border: none;
+    color: white;
+  }
+  &__Delete:hover {
+    cursor: pointer;
+  }
+  &__Delete:focus {
+    outline: none;
+  }
+  &__Info {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__Link {
+    color: white;
+  }
+}

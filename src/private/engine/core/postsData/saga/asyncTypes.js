@@ -1,0 +1,5 @@
+export const asyncTypes = Object.freeze({
+	GET_ASYNC_DATA_POSTS: 'GET_ASYNC_DATA_POSTS',
+	ADD_POST_ASYNC: 'ADD_POST_ASYNC',
+	DELETE_POST_ASYNC: 'DELETE_POST_ASYNC',
+});
