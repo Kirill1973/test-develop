@@ -1,7 +1,6 @@
 {
   "root": true,
   "extends": [
-    "airbnb",
     "prettier"
   ],
   "globals": {
@@ -82,8 +81,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/prefer-stateless-function": "off",
     "react/react-in-jsx-scope": "off",
-    "react/require-default-props": "off",
-    "template-tag-spacing": "error"/
+    "react/require-default-props": "off"
   },
   "overrides": [
   {

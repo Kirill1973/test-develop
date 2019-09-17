@@ -7,14 +7,14 @@ import { store } from '../../../engine/init/store';
 import Styles from './App.module.scss';
 
 const App = () => (
-	<Router>
-		<div className={Styles.App}>
-			<Provider store={store}>
-				<Route path="/" component={RenderPosts} exact />
-				<Route path="/posts/:id" component={PostDetails} exact />
-			</Provider>
-		</div>
-	</Router>
+  <Router>
+    <div className={Styles.App}>
+      <Provider store={store}>
+        <Route path="/" component={RenderPosts} exact />
+        <Route path="/posts/:id" component={PostDetails} exact />
+      </Provider>
+    </div>
+  </Router>
 );
 
 export default App;
