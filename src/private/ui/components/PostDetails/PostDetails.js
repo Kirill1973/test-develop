@@ -8,7 +8,7 @@ class PostDetails extends Component {
 	inputValue = React.createRef();
 
 	state = {
-		valuePar: '',
+		valuePar: ''
 	};
 
 	componentDidMount() {
@@ -17,11 +17,13 @@ class PostDetails extends Component {
 	}
 
 	onAddComment = () => {
-		const { current: { value } } = this.inputValue;
+		const {
+			current: { value }
+		} = this.inputValue;
 		const { updatePost, id, item } = this.props;
 		if (value.length > 0) {
 			const comment = {
-				id: item.comments.length === 0 ? 1 : item.comments[item.comments.length - 1].id + 1,
+				id: item.comments.length === 0 ? 1 : item.comments[0].id + 1,
 				postId: id,
 				body: value
 			};
@@ -33,9 +35,10 @@ class PostDetails extends Component {
 				comments: [comment, ...item.comments]
 			};
 			updatePost(id, newObj);
-			this.setState({valuePar: ''})
+			this.setState({ valuePar: '' });
+			this.inputValue.current.value = '';
 		} else {
-			this.setState({valuePar: 'введите комментарий'})
+			this.setState({ valuePar: 'введите комментарий' });
 		}
 	};
 
@@ -65,34 +68,48 @@ class PostDetails extends Component {
 						<p>Сообщение:</p>
 						<p>{item.body}</p>
 						<div>
-							<input ref={this.inputValue} className={Styles.PostDetails__Input} type="text" placeholder="введите коментарий"/>
-							<button onClick={this.onAddComment} className={Styles.PostDetails__Button} type="button">Добавить коментарий</button>
-							<p>{valuePar}</p>
+							<input
+								ref={this.inputValue}
+								className={Styles.PostDetails__Input}
+								type="text"
+								placeholder="введите коментарий"
+							/>
+							<button
+								onClick={this.onAddComment}
+								className={Styles.PostDetails__Button}
+								type="button"
+							>
+								Добавить коментарий
+							</button>
+							<p className={Styles.PostDetails__Warning}>{valuePar}</p>
 						</div>
 						<div>
 							<p>коментарии :</p>
-							{
-								item.comments.length > 0 ?
-								item.comments.map(item => <p key={item.id}>{item.body}</p>) :
+							{item.comments.length > 0 ? (
+								item.comments.map(item => <p key={item.id}>{item.body}</p>)
+							) : (
 								<p>коментариев нет</p>
-							}
+							)}
 						</div>
 					</div>
 				)}
 			</div>
-		)
+		);
 	}
 }
 
 const mapStateToProps = (state, ownProps) => ({
 	id: Number(ownProps.match.params.id),
 	item: state.postDataReducer.get('item'),
-	loading: state.postDataReducer.get('loading'),
+	loading: state.postDataReducer.get('loading')
 });
 
 const mapDispatchToProps = {
 	getDataPost: asyncActions.onGetPostAsync,
-	updatePost: asyncActions.onUpdatePost,
+	updatePost: asyncActions.onUpdatePost
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostDetails);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(PostDetails);
