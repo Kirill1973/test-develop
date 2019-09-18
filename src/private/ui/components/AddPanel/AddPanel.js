@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { format } from 'date-fns';
 import { connect } from 'react-redux';
 import Styles from './AddPanel.module.scss';
 import { asyncActions } from '../../../engine/core/postsData/saga/asyncActions';
@@ -27,9 +26,6 @@ class AddPanel extends Component {
       const newObj = {
         title: inputValueOne,
         body: inputValueTwo,
-        time: `${format(new Date(), 'HH:mm')}`,
-        date: `${format(new Date(), 'dd:MM:yyyy')}`,
-        comments: []
       };
       onAddPostAsync(newObj);
       this.setState({ valuePar: '' });

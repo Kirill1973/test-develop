@@ -5,19 +5,9 @@ import Styles from './MessageBox.module.scss';
 const MessageBox = ({ item, deletePost }) => {
   return (
     <div className={Styles.MessageBox}>
-      <div className={Styles.MessageBox__Features}>
-        <p>({item.comments.length}) комментариев</p>
-        <button
-          type="button"
-          onClick={() => deletePost(item.id)}
-          className={Styles.MessageBox__Delete}
-        >
-          Удалить
-        </button>
-      </div>
+      <p>{item.title}</p>
       <p>{item.body}</p>
       <div className={Styles.MessageBox__Info}>
-        <p>{item.date}</p>
         <Link
           to={`/posts/${item.id}`}
           className={Styles.MessageBox__Link}
@@ -25,7 +15,13 @@ const MessageBox = ({ item, deletePost }) => {
         >
           Показать подробнее
         </Link>
-        <p>{item.time}</p>
+        <button
+          type="button"
+          onClick={() => deletePost(item.id)}
+          className={Styles.MessageBox__Delete}
+        >
+          Удалить
+        </button>
       </div>
     </div>
   );

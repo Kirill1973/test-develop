@@ -14,7 +14,6 @@ class RenderPosts extends Component {
 
   render() {
     const { posts, loading, deletePost } = this.props;
-    console.log(posts);
     return (
       <div className={Styles.RenderPosts}>
         <div className={Styles.RenderPosts__Messages}>

@@ -37,10 +37,6 @@ const RenderPostDetails = ({
         </div>
       ) : (
         <div className={Styles.PostDetails__Info}>
-          <div className={Styles.PostDetails__Time}>
-            <p>{item.date}</p>
-            <p>{item.time}</p>
-          </div>
           <p>Тема:</p>
           {!editThem ? (
             <p>

@@ -10,4 +10,9 @@ export const asyncActions = Object.freeze({
 		payload: body,
 		idx: id,
 	}),
+  onAddComment: (id, data) => ({
+    type: asyncTypes.ADD_COMMENT_ASYNC,
+    payload: data,
+    idx: id,
+  }),
 });

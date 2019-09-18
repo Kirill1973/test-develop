@@ -43,21 +43,13 @@ class PostDetails extends Component {
     const {
       current: { value }
     } = this.inputValue;
-    const { updatePost, id, item } = this.props;
+    const { addComment, id } = this.props;
     if (value.length > 0) {
       const comment = {
-        id: item.comments.length === 0 ? 1 : item.comments[0].id + 1,
         postId: id,
         body: value
       };
-      const newObj = {
-        title: item.title,
-        body: item.body,
-        time: item.time,
-        date: item.date,
-        comments: [comment, ...item.comments]
-      };
-      updatePost(id, newObj);
+      addComment(id, comment);
       this.setState({ valuePar: '' });
       this.inputValue.current.value = '';
     } else {
@@ -78,9 +70,6 @@ class PostDetails extends Component {
       const newObj = {
         title: themTerm,
         body: item.body,
-        time: item.time,
-        date: item.date,
-        comments: item.comments
       };
       updatePost(id, newObj);
       this.setState({ editThem: false });
@@ -101,9 +90,6 @@ class PostDetails extends Component {
       const newObj = {
         title: item.title,
         body: messageTerm,
-        time: item.time,
-        date: item.date,
-        comments: item.comments
       };
       updatePost(id, newObj);
       this.setState({ editMessage: false });
@@ -154,7 +140,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = {
   getDataPost: asyncActions.onGetPostAsync,
-  updatePost: asyncActions.onUpdatePost
+  updatePost: asyncActions.onUpdatePost,
+  addComment: asyncActions.onAddComment,
 };
 
 export default connect(
