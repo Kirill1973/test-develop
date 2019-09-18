@@ -8,7 +8,7 @@ const actions = Object.freeze({
 	onDataFail: error => ({
 		type: types.GET_DATA_FAIL,
 		payload: error,
-	})
+	}),
 });
 
 export { actions }

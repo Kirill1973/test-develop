@@ -1,7 +1,7 @@
 import React from 'react';
-import Loader from 'react-loader-spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import Spinner from '../Spinner/Spinner';
 import Styles from './RenderPostDetails.module.scss';
 
 const RenderPostDetails = ({
@@ -27,13 +27,7 @@ const RenderPostDetails = ({
     <div className={Styles.PostDetails}>
       {loading === true ? (
         <div className={Styles.PostDetails__Loader}>
-          <Loader
-            type="Puff"
-            color="#00BFFF"
-            height={100}
-            width={100}
-            timeout={3000}
-          />
+          <Spinner />
         </div>
       ) : (
         <div className={Styles.PostDetails__Info}>

@@ -5,7 +5,7 @@ import { types } from './types';
 const initialState = Map({
   posts: [],
   error: '',
-  loading: true
+  loading: true,
 });
 
 export const postsReducer = (state = initialState, { payload, type }) => {

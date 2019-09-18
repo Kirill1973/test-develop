@@ -5,6 +5,7 @@ import Styles from './MessageBox.module.scss';
 const MessageBox = ({ item, deletePost }) => {
   return (
     <div className={Styles.MessageBox}>
+      <p></p>
       <p>{item.title}</p>
       <p>{item.body}</p>
       <div className={Styles.MessageBox__Info}>

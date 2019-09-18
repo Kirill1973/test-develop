@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Loader from 'react-loader-spinner';
 import { asyncActions } from '../../../engine/core/postsData/saga/asyncActions';
 import AddPanel from '../AddPanel/AddPanel';
+import Spinner from '../Spinner/Spinner';
 import MessageBox from '../MessageBox/MessageBox';
 import Styles from './RenderPosts.module.scss';
 
@@ -19,13 +19,7 @@ class RenderPosts extends Component {
         <div className={Styles.RenderPosts__Messages}>
           {loading === true ? (
             <div className={Styles.RenderPosts__Loader}>
-              <Loader
-                type="Puff"
-                color="#00BFFF"
-                height={100}
-                width={100}
-                timeout={3000}
-              />
+              <Spinner />
             </div>
           ) : (
             posts.map(item => (
@@ -41,7 +35,7 @@ class RenderPosts extends Component {
 
 const mapStateToProps = state => ({
   posts: state.postsReducer.get('posts'),
-  loading: state.postsReducer.get('loading')
+  loading: state.postsReducer.get('loading'),
 });
 
 const mapDispatchToProps = {
