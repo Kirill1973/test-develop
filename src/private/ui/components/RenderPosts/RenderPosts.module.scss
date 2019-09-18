@@ -1,6 +1,10 @@
 .RenderPosts {
   width: 60%;
   margin: 0 auto;
+  &__Messages {
+    height: 81vh;
+    overflow: scroll;
+  }
   &__Loader {
     width: 100%;
     height: 100%;

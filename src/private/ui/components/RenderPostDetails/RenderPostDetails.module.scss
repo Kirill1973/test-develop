@@ -12,6 +12,7 @@
   &__Input {
     padding: 12px;
     width: 300px;
+    margin-top: 20px;
   }
   &__Button {
     padding: 12px;
@@ -25,5 +26,23 @@
     color: red;
     text-transform: uppercase;
     font-weight: bold;
+  }
+  &__EditButton {
+    background: none;
+    border: none;
+  }
+  &__EditButton:hover {
+    cursor: pointer;
+  }
+  &__EditButton:focus {
+    outline: none;
+  }
+  &__EditInput {
+    width: 70%;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  &__EditButtonText {
+    height: 59px;
   }
 }

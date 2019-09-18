@@ -33,6 +33,8 @@ class AddPanel extends Component {
       };
       onAddPostAsync(newObj);
       this.setState({ valuePar: '' });
+      this.inputValue.current.value = '';
+      this.inputValue2.current.value = '';
     }
   };
 

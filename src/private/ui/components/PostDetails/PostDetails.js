@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Loader from 'react-loader-spinner';
 import { asyncActions } from '../../../engine/core/postData/saga/asyncActions';
-import Styles from './PostDetails.module.scss';
+import RenderPostDetails from '../../components/RenderPostDetails/RenderPostDetails';
 
 class PostDetails extends Component {
   inputValue = React.createRef();
 
   state = {
-    valuePar: ''
+    valuePar: '',
+    editThem: false,
+    editMessage: false,
+    themTerm: '',
+    messageTerm: '',
+    valueErrorThem: '',
+    valueErrorMessage: '',
   };
 
   componentDidMount() {
     const { getDataPost, id } = this.props;
     getDataPost(id);
   }
+
+  onEditThem = () => {
+    const { item } = this.props;
+    this.setState({ editThem: true, themTerm: item.title });
+  };
+
+  onEditMessage = () => {
+    const { item } = this.props;
+    this.setState({ editMessage: true, messageTerm: item.body });
+  };
+
+  onChangeThem = event => {
+    this.setState({themTerm: event.target.value})
+  };
+
+  onChangeMessage = event => {
+    this.setState({messageTerm: event.target.value})
+  };
 
   onAddComment = () => {
     const {
@@ -42,60 +65,83 @@ class PostDetails extends Component {
     }
   };
 
+  onEditThemText = () => {
+    const { themTerm } = this.state;
+    const { updatePost, id, item } = this.props;
+    if (themTerm === item.title) {
+      this.setState({editThem: false});
+      return;
+    }
+    if (themTerm.length === 0) {
+      this.setState({valueErrorThem: 'введите данные'})
+    } else {
+      const newObj = {
+        title: themTerm,
+        body: item.body,
+        time: item.time,
+        date: item.date,
+        comments: item.comments
+      };
+      updatePost(id, newObj);
+      this.setState({editThem: false});
+      this.setState({valueErrorThem: ''})
+    }
+  };
+
+  onEditMessageText = () => {
+    const { messageTerm } = this.state;
+    const { updatePost, id, item } = this.props;
+    if (messageTerm === item.body) {
+      this.setState({editMessage: false});
+      return;
+    }
+    if (messageTerm.length === 0) {
+      this.setState({valueErrorMessage: 'введите данные'})
+    } else {
+      const newObj = {
+        title: item.title,
+        body: messageTerm,
+        time: item.time,
+        date: item.date,
+        comments: item.comments
+      };
+      updatePost(id, newObj);
+      this.setState({editMessage: false});
+      this.setState({valueErrorMessage: ''})
+    }
+  };
+
   render() {
     const { loading, item } = this.props;
-    const { valuePar } = this.state;
+    const {
+      valuePar,
+      editMessage,
+      editThem,
+      messageTerm,
+      themTerm,
+      valueErrorThem,
+      valueErrorMessage,
+    } = this.state;
     return (
-      <div className={Styles.PostDetails}>
-        {loading === true ? (
-          <div className={Styles.PostDetails__Loader}>
-            <Loader
-              type="Puff"
-              color="#00BFFF"
-              height={100}
-              width={100}
-              timeout={3000}
-            />
-          </div>
-        ) : (
-          <div className={Styles.PostDetails__Info}>
-            <div className={Styles.PostDetails__Time}>
-              <p>{item.date}</p>
-              <p>{item.time}</p>
-            </div>
-            <p>Тема:</p>
-            <p>{item.title}</p>
-            <p>Сообщение:</p>
-            <p>{item.body}</p>
-            <div>
-              <input
-                ref={this.inputValue}
-                className={Styles.PostDetails__Input}
-                type="text"
-                placeholder="введите коментарий"
-              />
-              <button
-                onClick={this.onAddComment}
-                className={Styles.PostDetails__Button}
-                type="button"
-              >
-                Добавить коментарий
-              </button>
-              <p className={Styles.PostDetails__Warning}>{valuePar}</p>
-            </div>
-            <div>
-              <p>коментарии :</p>
-              {item.comments.length > 0 ? (
-                item.comments.map(comment => (
-                  <p key={comment.id}>{comment.body}</p>
-                ))
-              ) : (
-                <p>коментариев нет</p>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
+      <RenderPostDetails
+        loading={loading}
+        item={item}
+        valuePar={valuePar}
+        inputValue={this.inputValue}
+        onAddComment={this.onAddComment}
+        editMessage={editMessage}
+        editThem={editThem}
+        onEditThem={this.onEditThem}
+        onEditMessage={this.onEditMessage}
+        messageTerm={messageTerm}
+        themTerm={themTerm}
+        onChangeThem={this.onChangeThem}
+        onChangeMessage={this.onChangeMessage}
+        onEditThemText={this.onEditThemText}
+        onEditMessageText={this.onEditMessageText}
+        valueErrorThem={valueErrorThem}
+        valueErrorMessage={valueErrorMessage}
+      />
     );
   }
 }
