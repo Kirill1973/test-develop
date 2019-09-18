@@ -13,7 +13,7 @@ class PostDetails extends Component {
     themTerm: '',
     messageTerm: '',
     valueErrorThem: '',
-    valueErrorMessage: '',
+    valueErrorMessage: ''
   };
 
   componentDidMount() {
@@ -32,11 +32,11 @@ class PostDetails extends Component {
   };
 
   onChangeThem = event => {
-    this.setState({themTerm: event.target.value})
+    this.setState({ themTerm: event.target.value });
   };
 
   onChangeMessage = event => {
-    this.setState({messageTerm: event.target.value})
+    this.setState({ messageTerm: event.target.value });
   };
 
   onAddComment = () => {
@@ -69,11 +69,11 @@ class PostDetails extends Component {
     const { themTerm } = this.state;
     const { updatePost, id, item } = this.props;
     if (themTerm === item.title) {
-      this.setState({editThem: false});
+      this.setState({ editThem: false });
       return;
     }
     if (themTerm.length === 0) {
-      this.setState({valueErrorThem: 'введите данные'})
+      this.setState({ valueErrorThem: 'введите данные' });
     } else {
       const newObj = {
         title: themTerm,
@@ -83,8 +83,8 @@ class PostDetails extends Component {
         comments: item.comments
       };
       updatePost(id, newObj);
-      this.setState({editThem: false});
-      this.setState({valueErrorThem: ''})
+      this.setState({ editThem: false });
+      this.setState({ valueErrorThem: '' });
     }
   };
 
@@ -92,11 +92,11 @@ class PostDetails extends Component {
     const { messageTerm } = this.state;
     const { updatePost, id, item } = this.props;
     if (messageTerm === item.body) {
-      this.setState({editMessage: false});
+      this.setState({ editMessage: false });
       return;
     }
     if (messageTerm.length === 0) {
-      this.setState({valueErrorMessage: 'введите данные'})
+      this.setState({ valueErrorMessage: 'введите данные' });
     } else {
       const newObj = {
         title: item.title,
@@ -106,8 +106,8 @@ class PostDetails extends Component {
         comments: item.comments
       };
       updatePost(id, newObj);
-      this.setState({editMessage: false});
-      this.setState({valueErrorMessage: ''})
+      this.setState({ editMessage: false });
+      this.setState({ valueErrorMessage: '' });
     }
   };
 
@@ -120,7 +120,7 @@ class PostDetails extends Component {
       messageTerm,
       themTerm,
       valueErrorThem,
-      valueErrorMessage,
+      valueErrorMessage
     } = this.state;
     return (
       <RenderPostDetails
